@@ -1,6 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 shopt -s nullglob
+umask 0077
 
 # if command starts with an option, prepend mysqld
 if [ "${1:0:1}" = '-' ]; then
